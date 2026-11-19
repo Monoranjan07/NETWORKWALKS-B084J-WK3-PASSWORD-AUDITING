@@ -3,30 +3,40 @@
 ![Status](https://img.shields.io/badge/Status-Educational%20Lab-success)
 ![Tool](https://img.shields.io/badge/Tool-John%20the%20Ripper-black)
 ![Tool](https://img.shields.io/badge/Tool-NetworkWalks%20Tools-red)
+[![Watch the video](https://img.shields.io/badge/LinkedIn-Watch%20the%20video-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/feed/update/urn:li:activity:7529288882555809792/)
 
-A single write-up treating **two different approaches to the same password-auditing task** as one combined practical: recovering the password of a protected PDF, first using locally installed tooling (**John the Ripper + Johnny**), then using **NetworkWalks' own browser-based tools** (Hash Calculator + Password Cracker) — no installation required.
+A single write-up treating **two different approaches to the same password-auditing task** as one combined practical: recovering the password of protected PDFs, first using locally installed tooling (**John the Ripper + Johnny**), then using **NetworkWalks' own browser-based tools** (Hash Calculator + Password Cracker) — no installation required.
 
 ---
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Objective](#objective)
-3. [Lab Information](#lab-information)
-4. [Tools & Technologies](#tools--technologies)
-5. [Repository Structure](#repository-structure)
-6. [Approach A — Local Auditing with JTR + Johnny](#approach-a--local-auditing-with-jtr--johnny)
-7. [Approach B — Browser-Based Auditing with NetworkWalks Tools](#approach-b--browser-based-auditing-with-networkwalks-tools)
-8. [Approach Comparison](#approach-comparison)
-9. [Screenshot Evidence](#screenshot-evidence)
-10. [Result](#result)
-11. [Learning Outcomes](#learning-outcomes)
-12. [Security Insights](#security-insights)
-13. [Ethical Disclaimer](#ethical-disclaimer)
-14. [References](#references)
-15. [Author](#author)
+1. [Video Walkthrough](#video-walkthrough)
+2. [Overview](#overview)
+3. [Objective](#objective)
+4. [Lab Information](#lab-information)
+5. [Tools & Technologies](#tools--technologies)
+6. [Repository Structure](#repository-structure)
+7. [Approach A — Local Auditing with JTR + Johnny](#approach-a--local-auditing-with-jtr--johnny)
+8. [Approach B — Browser-Based Auditing with NetworkWalks Tools](#approach-b--browser-based-auditing-with-networkwalks-tools)
+9. [Approach Comparison](#approach-comparison)
+10. [Screenshot Evidence](#screenshot-evidence)
+11. [Result](#result)
+12. [Learning Outcomes](#learning-outcomes)
+13. [Security Insights](#security-insights)
+14. [Ethical Disclaimer](#ethical-disclaimer)
+15. [References](#references)
+16. [Author](#author)
 
 ---
+
+## Video Walkthrough
+
+A recorded walkthrough of this practical is posted on LinkedIn:
+
+[![Watch on LinkedIn](https://img.shields.io/badge/▶%20Watch%20the%20walkthrough-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/feed/update/urn:li:activity:7529288882555809792/)
+
+> 🔗 [https://www.linkedin.com/feed/update/urn:li:activity:7529288882555809792/](https://www.linkedin.com/feed/update/urn:li:activity:7529288882555809792/)
 
 ## Overview
 
@@ -39,7 +49,7 @@ Documenting them together makes the comparison explicit: the *concept* (extract 
 
 ## Objective
 
-- Recover the password of a protected lab PDF using two independent methods.
+- Recover the password of protected lab PDFs using two independent methods.
 - Understand the shared underlying workflow: hash extraction → dictionary-based attack → verification.
 - Compare a locally installed tool-chain against a browser-based one for the same task.
 - Document both approaches, with evidence, as a single combined practical.
@@ -62,7 +72,7 @@ Documenting them together makes the comparison explicit: the *concept* (extract 
 | A — Local | [Johnny](https://openwall.info/wiki/john/johnny) | GUI front end for JTR |
 | B — Browser | [NetworkWalks Hash Calculator](https://networkwalks.com/hash-calculator/) | Extracts the PDF's password hash |
 | B — Browser | [NetworkWalks Password Cracker](https://networkwalks.com/password-cracker/) | Attacks the extracted hash |
-| Both | Target PDF | Password-protected lab file (`My Locked PDF1.pdf`) |
+| Both | Target PDFs | 4 password-protected lab files in [`PDF/`](NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/PDF) |
 
 ## Repository Structure
 
@@ -71,16 +81,16 @@ NETWORKWALKS-B084J-WK3-PASSWORD-AUDITING/
 │
 ├── README.md
 │
-├── Module-1-JTR-Johnny/
-│   └── screenshots/
-│       └── (Approach A screenshots)
-│
-├── Module-2-NetworkWalks-Tools/
-│   └── screenshots/
-│       └── (Approach B screenshots)
-│
-└── PDF/
-    └── My Locked PDF1.pdf
+└── NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/
+    │
+    ├── PDF/
+    │   ├── My Locked PDF1.pdf
+    │   ├── My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf
+    │   ├── My Locked PDF2.pdf
+    │   └── My Locked PDF3.pdf
+    │
+    └── SS/
+        └── (26 screenshots — see Screenshot Evidence below)
 ```
 
 ## Approach A — Local Auditing with JTR + Johnny
@@ -110,16 +120,60 @@ NETWORKWALKS-B084J-WK3-PASSWORD-AUDITING/
 
 ## Screenshot Evidence
 
-Evidence for each approach is organized under its own `screenshots/` folder (see [Repository Structure](#repository-structure)), grouped as:
+All 26 screenshots from the practical, in chronological order (click any image to open it full-size on GitHub):
 
-- Setup / tool access
-- Hash extraction
-- Attack execution
-- Result & verification
+<table>
+<tr>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20014535.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20014535.png" width="200"/></a><br/><sub>2026-11-16 014535</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20015330.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20015330.png" width="200"/></a><br/><sub>2026-11-16 015330</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20020842.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20020842.png" width="200"/></a><br/><sub>2026-11-16 020842</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20021923.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20021923.png" width="200"/></a><br/><sub>2026-11-16 021923</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022003.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022003.png" width="200"/></a><br/><sub>2026-11-16 022003</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022040.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022040.png" width="200"/></a><br/><sub>2026-11-16 022040</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022211.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022211.png" width="200"/></a><br/><sub>2026-11-16 022211</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022325.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022325.png" width="200"/></a><br/><sub>2026-11-16 022325</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022428.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022428.png" width="200"/></a><br/><sub>2026-11-16 022428</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022501.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022501.png" width="200"/></a><br/><sub>2026-11-16 022501</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022535.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022535.png" width="200"/></a><br/><sub>2026-11-16 022535</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022948.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20022948.png" width="200"/></a><br/><sub>2026-11-16 022948</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20023009.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20023009.png" width="200"/></a><br/><sub>2026-11-16 023009</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20023138.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20023138.png" width="200"/></a><br/><sub>2026-11-16 023138</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20023154.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20023154.png" width="200"/></a><br/><sub>2026-11-16 023154</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20024811.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20024811.png" width="200"/></a><br/><sub>2026-11-16 024811</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20024857.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20024857.png" width="200"/></a><br/><sub>2026-11-16 024857</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20025526.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20025526.png" width="200"/></a><br/><sub>2026-11-16 025526</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20025615.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20025615.png" width="200"/></a><br/><sub>2026-11-16 025615</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20025641.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-16%20025641.png" width="200"/></a><br/><sub>2026-11-16 025641</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20013958.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20013958.png" width="200"/></a><br/><sub>2026-11-20 013958</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014047.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014047.png" width="200"/></a><br/><sub>2026-11-20 014047</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014122.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014122.png" width="200"/></a><br/><sub>2026-11-20 014122</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014213.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014213.png" width="200"/></a><br/><sub>2026-11-20 014213</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014239.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014239.png" width="200"/></a><br/><sub>2026-11-20 014239</sub></td>
+<td align="center"><a href="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014533.png"><img src="NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS/Screenshot%202026-11-20%20014533.png" width="200"/></a><br/><sub>2026-11-20 014533</sub></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+Didn't load above, or want the full-resolution originals? Open the folder directly:
+
+[![Open screenshots folder](https://img.shields.io/badge/📁%20Open-SS%20folder%20on%20GitHub-blue?style=for-the-badge)](https://github.com/Monoranjan07/NETWORKWALKS-B084J-WK3-PASSWORD-AUDITING/tree/main/NETWORKWALKS-B084J-WK3-JTR-PASSWORD-AUDIT-main/SS)
 
 ## Result
 
-Both approaches successfully recovered the password of the protected lab PDF, confirmed by reopening the file. Flags captured across the combined practical:
+Both approaches successfully recovered the password of the protected lab PDFs, confirmed by reopening the files. Flags captured across the combined practical:
 
 ```text
 nw{networkwalks_flag_260821_1}
@@ -162,3 +216,4 @@ Cybersecurity Student — NetworkWalks Cybersecurity & Ethical Hacking Program (
 - GitHub: [monoranjan07](https://github.com/monoranjan07)
 - Repository: [NETWORKWALKS-B084J-WK3-PASSWORD-AUDITING](https://github.com/Monoranjan07/NETWORKWALKS-B084J-WK3-PASSWORD-AUDITING)
 - LinkedIn: [monoranjan-banik](https://www.linkedin.com/in/monoranjan-banik-3a0092335/)
+- Video walkthrough: [LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:7529288882555809792/)
